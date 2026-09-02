@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#a94212">
+  <title>Computum — Acesso</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-page">
+  <div class="top-accent"></div>
+
+  <main class="auth-shell">
+    <section class="brand-area" aria-label="Computum">
+      <div class="brand-lockup">
+        <span class="brand-bar" aria-hidden="true"></span>
+        <div>
+          <h1>COMPUTUM</h1>
+          <div class="brand-subtitle">
+            <span>Cálculos</span><b>•</b><span>Dados</span><b>•</b><span>Automação</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="brand-rule">
+        <span></span>
+        <span class="scales" aria-hidden="true">⚖</span>
+        <span></span>
+      </div>
+
+      <p class="brand-slogan">Precisão técnica. Confiança nos resultados.</p>
+    </section>
+
+    <section class="auth-card" aria-labelledby="login-title">
+      <div class="lock-badge" aria-hidden="true">♙</div>
+
+      <div class="auth-card-header">
+        <h2 id="login-title">Acesso ao Computum</h2>
+        <p>Entre com suas credenciais para acessar a plataforma.</p>
+        <div class="mini-rule"></div>
+      </div>
+
+      <form id="login-form" novalidate>
+        <label for="email">E-mail</label>
+        <div class="input-wrap">
+          <span class="input-icon" aria-hidden="true">✉</span>
+          <input id="email" name="email" type="email" autocomplete="email"
+                 placeholder="seu@email.com" required>
+        </div>
+
+        <label for="password">Senha</label>
+        <div class="input-wrap">
+          <span class="input-icon" aria-hidden="true">♙</span>
+          <input id="password" name="password" type="password"
+                 autocomplete="current-password" placeholder="Sua senha" required>
+          <button id="toggle-password" class="password-toggle" type="button"
+                  aria-label="Mostrar senha" title="Mostrar senha">◉</button>
+        </div>
+
+        <div id="auth-error" class="auth-message error" role="alert" hidden></div>
+        <div id="auth-success" class="auth-message success" role="status" hidden></div>
+
+        <div class="form-actions">
+          <button id="forgot-password" type="button" class="text-button">
+            Esqueci minha senha
+          </button>
+        </div>
+
+        <button id="login-button" type="submit" class="primary-button">
+          <span class="login-icon" aria-hidden="true">↪</span>
+          <span class="button-label">ENTRAR</span>
+          <span class="button-loading" hidden>ENTRANDO...</span>
+        </button>
+      </form>
+
+      <div class="platform-label">
+        <span></span>
+        <strong>PLATAFORMA COMPUTUM</strong>
+        <span></span>
+      </div>
+    </section>
+
+    <section class="feature-strip" aria-label="Características">
+      <article>
+        <div class="feature-icon">♢</div>
+        <div>
+          <h3>Segurança</h3>
+          <p>Seus dados protegidos com tecnologia de ponta.</p>
+        </div>
+      </article>
+
+      <article>
+        <div class="feature-icon">◎</div>
+        <div>
+          <h3>Precisão</h3>
+          <p>Cálculos confiáveis e metodologia atualizada.</p>
+        </div>
+      </article>
+
+      <article>
+        <div class="feature-icon">▥</div>
+        <div>
+          <h3>Eficiência</h3>
+          <p>Automação inteligente para resultados rápidos.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="auth-footer">
+    <p>© 2026 Computum. Todos os direitos reservados.</p>
+    <p>Soluções especializadas em cálculos judiciais e administrativos.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

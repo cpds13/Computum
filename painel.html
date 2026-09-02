@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computum — Painel</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/painel.css">
+</head>
+<body class="panel-page">
+  <header class="topbar">
+    <a class="topbar-brand" href="painel.html">Computum</a>
+    <div class="topbar-user">
+      <span id="user-email"></span>
+      <button id="logout-button" class="secondary-button">Sair</button>
+    </div>
+  </header>
+
+  <main class="panel-shell">
+    <section class="panel-heading">
+      <span class="eyebrow">PAINEL</span>
+      <h1>Seus sistemas</h1>
+      <p>Selecione o sistema que deseja utilizar.</p>
+    </section>
+
+    <section class="system-grid">
+      <a class="system-card" href="https://abono.computum.com.br/">
+        <span class="system-tag">CÁLCULOS</span>
+        <h2>Abono de Permanência</h2>
+        <p>Cálculos e evolução relacionados ao abono de permanência.</p>
+        <span class="system-link">Abrir sistema →</span>
+      </a>
+
+      <a class="system-card" href="https://diferencas.computum.com.br/">
+        <span class="system-tag">CÁLCULOS</span>
+        <h2>Diferenças</h2>
+        <p>Sistema de cálculos de diferenças e liquidação.</p>
+        <span class="system-link">Abrir sistema →</span>
+      </a>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/painel.js"></script>
+</body>
+</html>
