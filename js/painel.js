@@ -31,14 +31,18 @@ const aplicativos = [
     nome: "Auditoria de Planos de Saúde",
     categoria: "ANÁLISE",
     descricao: "Ferramenta para análise e auditoria de planos de saúde.",
-    status: "breve"
+    url: "https://saude.computum.com.br/",
+    status: "ativo",
+    destaque: true
   },
   {
     id: "informa-laudo",
     nome: "Informa-Laudo",
     categoria: "ANÁLISE",
     descricao: "Ferramenta de apoio à organização e análise de laudos.",
-    status: "breve"
+    url: "https://informaclc.computum.com.br/",
+    status: "ativo",
+    destaque: true
   }
 ];
 
