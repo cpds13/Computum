@@ -3,42 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Computum — Painel</title>
+  <meta name="theme-color" content="#172033">
+  <meta name="description" content="Computum — ambiente central de ferramentas.">
+  <title>Computum — Dashboard</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/painel.css">
 </head>
 <body class="panel-page">
   <header class="topbar">
-    <a class="topbar-brand" href="painel.html">Computum</a>
+    <a class="topbar-brand" href="painel.html" aria-label="Computum — início">
+      <span class="brand-mark" aria-hidden="true">C</span>
+      <span>COMPUTUM</span>
+    </a>
+
     <div class="topbar-user">
-      <span id="user-email"></span>
-      <button id="logout-button" class="secondary-button">Sair</button>
+      <div class="user-info">
+        <span class="user-label">Conta</span>
+        <span id="user-email"></span>
+      </div>
+      <button id="logout-button" class="secondary-button" type="button">Sair</button>
     </div>
   </header>
 
   <main class="panel-shell">
     <section class="panel-heading">
-      <span class="eyebrow">PAINEL</span>
-      <h1>Seus sistemas</h1>
-      <p>Selecione o sistema que deseja utilizar.</p>
+      <div>
+        <span class="eyebrow">AMBIENTE COMPUTUM</span>
+        <h1>Suas ferramentas</h1>
+        <p>Acesse, em um único lugar, as ferramentas disponíveis no ecossistema Computum.</p>
+      </div>
+      <div class="heading-status" aria-label="Status do ambiente">
+        <span class="status-dot" aria-hidden="true"></span>
+        Ambiente ativo
+      </div>
     </section>
 
-    <section class="system-grid">
-      <a class="system-card" href="https://abono.computum.com.br/">
-        <span class="system-tag">CÁLCULOS</span>
-        <h2>Abono de Permanência</h2>
-        <p>Cálculos e evolução relacionados ao abono de permanência.</p>
-        <span class="system-link">Abrir sistema →</span>
-      </a>
+    <section aria-labelledby="tools-title">
+      <div class="section-title-row">
+        <h2 id="tools-title">Ferramentas</h2>
+        <span id="tools-count" class="tools-count"></span>
+      </div>
+      <div id="system-grid" class="system-grid" aria-live="polite"></div>
+    </section>
 
-      <a class="system-card" href="https://diferencas.computum.com.br/">
-        <span class="system-tag">CÁLCULOS</span>
-        <h2>Diferenças</h2>
-        <p>Sistema de cálculos de diferenças e liquidação.</p>
-        <span class="system-link">Abrir sistema →</span>
-      </a>
+    <section class="portal-note" aria-label="Sobre o Computum">
+      <div class="portal-note-icon" aria-hidden="true">C</div>
+      <div>
+        <strong>Um único ponto de acesso</strong>
+        <p>O Computum organiza suas ferramentas em um só ambiente. Cada aplicação permanece independente, com seu próprio sistema e endereço.</p>
+      </div>
     </section>
   </main>
+
+  <footer class="panel-footer">
+    <span>© 2026 Computum</span>
+    <span>Portal central de ferramentas</span>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/supabase.js"></script>
