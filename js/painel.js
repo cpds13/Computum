@@ -40,7 +40,7 @@ const aplicativos = [
     nome: "Informa-Laudo",
     categoria: "ANÁLISE",
     descricao: "Ferramenta de apoio à organização e análise de laudos.",
-    url: "https://informaclc.computum.com.br/",
+    url: "https://informacalc.computum.com.br/",
     status: "ativo",
     destaque: true
   }
