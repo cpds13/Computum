@@ -1,120 +1,165 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#a94212">
-  <title>Computum — Acesso</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/auth.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#172B46" />
+  <meta
+    name="description"
+    content="Gestão Computum — controle de solicitações, cálculos judiciais, retrabalhos e financeiro."
+  />
+  <title>Gestão Computum</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="auth-page">
-  <div class="top-accent"></div>
 
-  <main class="auth-shell">
-    <section class="brand-area" aria-label="Computum">
-      <div class="brand-lockup">
-        <span class="brand-bar" aria-hidden="true"></span>
+<body>
+  <div id="appShell" class="app-shell">
+
+    <aside class="sidebar" id="sidebar">
+
+      <div class="brand">
+        <div class="brand-mark"><span></span></div>
+
         <div>
-          <h1>COMPUTUM</h1>
-          <div class="brand-subtitle">
-            <span>Cálculos</span><b>•</b><span>Dados</span><b>•</b><span>Automação</span>
+          <strong>COMPUTUM</strong>
+          <small>Gestão de Cálculos</small>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Navegação principal">
+
+        <button class="nav-item active" data-view="dashboard">
+          <span>⌂</span>
+          Dashboard
+        </button>
+
+        <button class="nav-item" data-view="solicitacoes">
+          <span>▣</span>
+          Solicitações
+        </button>
+
+        <button class="nav-item" data-view="advogados">
+          <span>♙</span>
+          Advogados
+        </button>
+
+        <button class="nav-item" data-view="clientes">
+          <span>♧</span>
+          Clientes
+        </button>
+
+        <button class="nav-item" data-view="processos">
+          <span>§</span>
+          Processos
+        </button>
+
+        <button class="nav-item" data-view="calculistas">
+          <span>∑</span>
+          Calculistas
+        </button>
+
+        <button class="nav-item" data-view="financeiro">
+          <span>R$</span>
+          Financeiro
+        </button>
+
+        <button class="nav-item" data-view="relatorios">
+          <span>◫</span>
+          Relatórios
+        </button>
+
+      </nav>
+
+      <div class="sidebar-bottom">
+
+        <button class="nav-item" data-view="configuracoes">
+          <span>⚙</span>
+          Configurações
+        </button>
+
+        <div class="user-mini">
+          <div class="avatar" id="sidebarAvatar">U</div>
+
+          <div>
+            <strong id="sidebarUserName">Usuário</strong>
+            <small id="sidebarUserProfile">Carregando...</small>
           </div>
         </div>
+
       </div>
+    </aside>
 
-      <div class="brand-rule">
-        <span></span>
-        <span class="scales" aria-hidden="true">⚖</span>
-        <span></span>
-      </div>
+    <main class="main">
 
-      <p class="brand-slogan">Precisão técnica. Confiança nos resultados.</p>
-    </section>
+      <header class="topbar">
 
-    <section class="auth-card" aria-labelledby="login-title">
-      <div class="lock-badge" aria-hidden="true">♙</div>
-
-      <div class="auth-card-header">
-        <h2 id="login-title">Acesso ao Computum</h2>
-        <p>Entre com suas credenciais para acessar a plataforma.</p>
-        <div class="mini-rule"></div>
-      </div>
-
-      <form id="login-form" novalidate>
-        <label for="email">E-mail</label>
-        <div class="input-wrap">
-          <span class="input-icon" aria-hidden="true">✉</span>
-          <input id="email" name="email" type="email" autocomplete="email"
-                 placeholder="seu@email.com" required>
-        </div>
-
-        <label for="password">Senha</label>
-        <div class="input-wrap">
-          <span class="input-icon" aria-hidden="true">♙</span>
-          <input id="password" name="password" type="password"
-                 autocomplete="current-password" placeholder="Sua senha" required>
-          <button id="toggle-password" class="password-toggle" type="button"
-                  aria-label="Mostrar senha" title="Mostrar senha">◉</button>
-        </div>
-
-        <div id="auth-error" class="auth-message error" role="alert" hidden></div>
-        <div id="auth-success" class="auth-message success" role="status" hidden></div>
-
-        <div class="form-actions">
-          <button id="forgot-password" type="button" class="text-button">
-            Esqueci minha senha
-          </button>
-        </div>
-
-        <button id="login-button" type="submit" class="primary-button">
-          <span class="login-icon" aria-hidden="true">↪</span>
-          <span class="button-label">ENTRAR</span>
-          <span class="button-loading" hidden>ENTRANDO...</span>
+        <button
+          class="icon-button mobile-only"
+          id="menuBtn"
+          aria-label="Abrir menu"
+        >
+          ☰
         </button>
-      </form>
 
-      <div class="platform-label">
-        <span></span>
-        <strong>PLATAFORMA COMPUTUM</strong>
-        <span></span>
-      </div>
-    </section>
-
-    <section class="feature-strip" aria-label="Características">
-      <article>
-        <div class="feature-icon">♢</div>
-        <div>
-          <h3>Segurança</h3>
-          <p>Seus dados protegidos com tecnologia de ponta.</p>
+        <div class="breadcrumb" id="breadcrumb">
+          Dashboard
         </div>
-      </article>
 
-      <article>
-        <div class="feature-icon">◎</div>
-        <div>
-          <h3>Precisão</h3>
-          <p>Cálculos confiáveis e metodologia atualizada.</p>
+        <div class="top-actions">
+
+          <button
+            class="icon-button"
+            title="Notificações"
+          >
+            ♢
+            <i class="notification-dot"></i>
+          </button>
+
+          <button
+            class="profile-button"
+            id="profileBtn"
+          >
+            <span
+              class="avatar small"
+              id="topbarAvatar"
+            >
+              U
+            </span>
+
+            <span
+              class="desktop-only"
+              id="topbarUserName"
+            >
+              Usuário
+            </span>
+
+            ⌄
+          </button>
+
         </div>
-      </article>
 
-      <article>
-        <div class="feature-icon">▥</div>
-        <div>
-          <h3>Eficiência</h3>
-          <p>Automação inteligente para resultados rápidos.</p>
-        </div>
-      </article>
-    </section>
-  </main>
+      </header>
 
-  <footer class="auth-footer">
-    <p>© 2026 Computum. Todos os direitos reservados.</p>
-    <p>Soluções especializadas em cálculos judiciais e administrativos.</p>
-  </footer>
+      <div id="content" class="content"></div>
 
+    </main>
+
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <div id="modalRoot"></div>
+
+  <div id="drawerRoot"></div>
+
+  <!-- Supabase -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/supabase.js"></script>
-  <script src="js/auth.js"></script>
+
+  <!-- Configuração do cliente Supabase -->
+  <script src="supabase-client.js"></script>
+
+  <!-- Aplicação -->
+  <script src="app.js"></script>
+
 </body>
 </html>
